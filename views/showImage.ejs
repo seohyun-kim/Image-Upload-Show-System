@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<%- include('./part/createImage.ejs') %>
+	</head>
+	<body>
+		<div id="showImage">
+		</div>
+		<script>
+			var data = JSON.parse('<%- JSON.stringify(data) %>');
+
+			console.log(data.length);
+
+			for (i = 0; i <= data.length - 1; i++) {
+				createImg("data:image/jpeg;base64, "+ data[i].image, data[i].image_name, i);
+			}
+		</script>
+	</body>
+</html>
