@@ -1,0 +1,13 @@
+<script src="http://code.jquery.com/jquery-latest.js"></script> 
+
+<script>
+    // node에서 제일 처음 날짜와 마지막 날짜 넘겨줌
+    var imageIdx = JSON.parse("<%- JSON.stringify(imageIdx) %>"); 
+    console.log(imageIdx);
+    for (var i=1; i<=imageIdx; i++) {
+            $('#selectStartImage').append('<option value="'+String(i)+'">'+String(i)+'</option>');
+            $('#selectLastImage').append('<option value="'+String(i)+'">'+String(i)+'</option>');
+    }
+    $("#selectStartImage option:first").prop("selected", true);
+    $("#selectLastImage option:last").prop("selected", true);
+</script>

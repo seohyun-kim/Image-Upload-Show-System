@@ -1,0 +1,19 @@
+<script>
+    function createImg(src, name, i) {
+        var div = document.createElement('div');
+        div.id = 'div'+i;
+        div.innerText = name;
+        document.getElementById('showImage').appendChild(div);
+
+        // 줄바꿈
+        var br = document.createElement('br');
+        document.getElementById('div'+i).appendChild(br);
+
+        // 이미지
+        var img = document.createElement('img');
+        img.src = src;
+        img.alt = name;
+        img.title = name;
+        document.getElementById('div'+i).appendChild(img);
+    }
+</script>
